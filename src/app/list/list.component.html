@@ -4,19 +4,18 @@
 
 <div class="task" *ngFor='let task of taskList; let i = index'>
     
-    <div>
-        <span class="title bg-warning">Task number:</span> {{i + 1}}
+    <div class="bg-warning">
+        <span class="title font-weight-bold">Task number:</span> {{i + 1}}
 
         <span class="remove">
-            <button (click)="removeTask(i)" class="btn btn-danger" title="Delete"> x</button>
+            <button (click)="removeTask(i)" class="btn btn-danger float-right" title="Delete"> x</button>
         </span>
     </div>
 
-    <div>
-        <span class="title">Title:</span>
-        <input [(ngModel)]="task.title" type="text" class="form-control" placeholder="Your Title text">
+    <div class="row">
+        <span class="title col-1">Title:</span>
+        <input [(ngModel)]="task.title" type="text" class="form-control col-6 font-weight-bold font-italic" placeholder="Your Title text">
     </div>
-
     <div>
         <span class="title">Description:</span>
         <input [(ngModel)]="task.description" type="text" class="form-control" placeholder="Your Description text">
